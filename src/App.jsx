@@ -1,4 +1,3 @@
-import './App.css'
 import History from "./components/History";
 import HowTo from "./components/HowTo";
 import ProductInfo from "./components/Productinfo";
