@@ -1,8 +1,11 @@
+import { useState } from "react";
 import History from "./components/History";
 import HowTo from "./components/HowTo";
 import ProductInfo from "./components/Productinfo";
 
 export default function App() {
+  const [activeTab, setActiveTab] = useState("tabs-center-1"); // Tracks the active tab
+
   return (
     <div>
       <header className="p-4">
@@ -10,26 +13,73 @@ export default function App() {
       </header>
 
       <main className="container mx-auto mt-6">
-      <nav class="tabs tabs-bordered  justify-center" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
-        <button type="button" class="tab active-tab:tab-active active" id="tabs-center-item-1" data-tab="#tabs-center-1" aria-controls="tabs-center-1" role="tab" aria-selected="true">
-          Fakta
-        </button>
-        <button type="button" class="tab active-tab:tab-active" id="tabs-center-item-2" data-tab="#tabs-center-2" aria-controls="tabs-center-2" role="tab" aria-selected="false">
-          Prosess
-        </button>
-        <button type="button" class="tab active-tab:tab-active" id="tabs-center-item-3" data-tab="#tabs-center-3" aria-controls="tabs-center-3" role="tab" aria-selected="false">
-          Produktinfo
-        </button>
-      </nav>
-      <div id="tabs-center-1" role="tabpanel" aria-labelledby="tabs-center-item-1">
-        <History/>
-      </div>
-      <div id="tabs-center-2" class="hidden" role="tabpanel" aria-labelledby="tabs-center-item-2">
-        <HowTo/>
-      </div>
-      <div id="tabs-center-3" class="hidden" role="tabpanel" aria-labelledby="tabs-center-item-3">
-        <ProductInfo/>
-      </div>
+        {/* Navigation for Tabs */}
+        <nav
+          className="tabs tabs-bordered justify-center"
+          aria-label="Tabs"
+          role="tablist"
+          aria-orientation="horizontal"
+        >
+          <button
+            type="button"
+            className={`tab ${activeTab === "tabs-center-1" ? "tab-active" : ""}`}
+            onClick={() => setActiveTab("tabs-center-1")}
+            id="tabs-center-item-1"
+            aria-controls="tabs-center-1"
+            role="tab"
+            aria-selected={activeTab === "tabs-center-1"}
+          >
+            Fakta
+          </button>
+          <button
+            type="button"
+            className={`tab ${activeTab === "tabs-center-2" ? "tab-active" : ""}`}
+            onClick={() => setActiveTab("tabs-center-2")}
+            id="tabs-center-item-2"
+            aria-controls="tabs-center-2"
+            role="tab"
+            aria-selected={activeTab === "tabs-center-2"}
+          >
+            Prosess
+          </button>
+          <button
+            type="button"
+            className={`tab ${activeTab === "tabs-center-3" ? "tab-active" : ""}`}
+            onClick={() => setActiveTab("tabs-center-3")}
+            id="tabs-center-item-3"
+            aria-controls="tabs-center-3"
+            role="tab"
+            aria-selected={activeTab === "tabs-center-3"}
+          >
+            Produktinfo
+          </button>
+        </nav>
+
+        {/* Tab Content */}
+        <div
+          id="tabs-center-1"
+          role="tabpanel"
+          aria-labelledby="tabs-center-item-1"
+          className={`flex justify-center mt-4 ${activeTab === "tabs-center-1" ? "" : "hidden"}`}
+        >
+          <History />
+        </div>
+        <div
+          id="tabs-center-2"
+          role="tabpanel"
+          aria-labelledby="tabs-center-item-2"
+          className={`flex justify-center mt-4 ${activeTab === "tabs-center-2" ? "" : "hidden"}`}
+        >
+          <HowTo />
+        </div>
+        <div
+          id="tabs-center-3"
+          role="tabpanel"
+          aria-labelledby="tabs-center-item-3"
+          className={`flex justify-center mt-4 ${activeTab === "tabs-center-3" ? "" : "hidden"}`}
+        >
+          <ProductInfo />
+        </div>
       </main>
     </div>
   );

@@ -5,14 +5,12 @@ import Image5 from '../assets/5.jpg';
 
 export default function HowTo() {
     return (
-      <section id="how-to" className="bg-gray-50 p-6 rounded-md shadow">
+      <section id="how-to" className="bg-gray-50 p-6 rounded-md shadow max-w-[700px] mt-6">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">Prosess</h2>
-        <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical timeline-centered">
+        <ul className="relative border-l-2 border-gray-300 pl-6">
           {/* <!-- timeline item 1--> */}
-          <li>
-            <div class="timeline-start me-4 mt-8 max-md:pt-2">
-              <div class="text-base-content/50 text-sm font-normal text-gray-400">Steg 1</div>
-            </div>
+         <li className="mb-4 flex flex-col">
+          <div className="text-gray-400 text-sm font-normal w-20">Steg 1</div>
             <div class="timeline-end ms-4 mb-8">
               <div class="card">
                 <div class="card-body gap-4">
@@ -26,13 +24,10 @@ export default function HowTo() {
                 </div>
               </div>
             </div>
-            <hr />
           </li>
           {/* <!-- timeline item 2--> */}
-          <li>
-          <div class="timeline-start me-4 mt-8 max-md:pt-2">
-              <div class="text-base-content/50 text-sm font-normal text-gray-400">Steg 2</div>
-            </div>
+         <li className="mb-4 flex flex-col">
+          <div className="text-gray-400 text-sm font-normal w-20">Steg 2</div>
             <div class="timeline-end me-4 mb-8">
               <div class="card">
                 <div class="card-body gap-4">
@@ -43,13 +38,10 @@ export default function HowTo() {
                 </div>
               </div>
             </div>
-            <hr />
           </li>
           {/* <!-- timeline item 3--> */}
-          <li>
-            <div class="timeline-start me-4 mt-8 max-md:pt-2">
-              <div class="text-base-content/50 text-sm font-normal text-gray-400">Steg 3</div>
-            </div>
+         <li className="mb-4 flex flex-col">
+          <div className="text-gray-400 text-sm font-normal w-20">Steg 3</div>
             <div class="timeline-end ms-4 mb-8">
               <div class="card">
                 <div class="card-body gap-4">
@@ -63,13 +55,10 @@ export default function HowTo() {
                 </div>
               </div>
             </div>
-            <hr />
           </li>
           {/* <!-- timeline item 4--> */}
-          <li>
-            <div class="timeline-start me-4 mt-8 max-md:pt-2">
-              <div class="text-base-content/50 text-sm font-normal text-gray-400">Steg 4</div>
-            </div>
+         <li className="mb-4 flex flex-col">
+          <div className="text-gray-400 text-sm font-normal w-20">Steg 4</div>
             <div class="timeline-end ms-4 mb-8">
               <div class="card">
                 <div class="card-body gap-4">
@@ -83,13 +72,10 @@ export default function HowTo() {
                 </div>
               </div>
             </div>
-            <hr />
           </li>
           {/* <!-- timeline item 5--> */}
-          <li>
-          <div class="timeline-start me-4 mt-8 max-md:pt-2">
-              <div class="text-base-content/50 text-sm font-normal text-gray-400">Steg 5</div>
-            </div>
+         <li className="mb-4 flex flex-col">
+          <div className="text-gray-400 text-sm font-normal w-20">Steg 5</div>
             <div class="timeline-end ms-4 mb-8">
               <div class="card">
                 <div class="card-body gap-4">
@@ -100,13 +86,10 @@ export default function HowTo() {
                 </div>
               </div>
             </div>
-            <hr />
           </li>
           {/* <!-- timeline item 6--> */}
-          <li>
-          <div class="timeline-start me-4 mt-8 max-md:pt-2">
-              <div class="text-base-content/50 text-sm font-normal text-gray-400">Steg 6</div>
-            </div>
+         <li className="mb-4 flex flex-col">
+          <div className="text-gray-400 text-sm font-normal w-20">Steg 6</div>
             <div class="timeline-end ms-4 mb-8">
               <div class="card">
                 <div class="card-body gap-4">
@@ -120,13 +103,10 @@ export default function HowTo() {
                 </div>
               </div>
             </div>
-            <hr />
           </li>
           {/* <!-- timeline item 7--> */}
-          <li>
-          <div class="timeline-start me-4 mt-8 max-md:pt-2">
-              <div class="text-base-content/50 text-sm font-normal text-gray-400">Steg 7</div>
-            </div>
+         <li className="mb-4 flex flex-col">
+          <div className="text-gray-400 text-sm font-normal w-20">Steg 7</div>
             <div class="timeline-end ms-4 mb-8">
               <div class="card">
                 <div class="card-body gap-4">
@@ -137,7 +117,6 @@ export default function HowTo() {
                 </div>
               </div>
             </div>
-            <hr />
           </li>
         </ul>
       </section>

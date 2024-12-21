@@ -1,6 +1,6 @@
 export default function History() {
     return (
-      <section id="history" className="bg-gray-50 p-6 rounded-md shadow">
+      <section id="history" className="bg-gray-50 p-6 rounded-md shadow mx-96">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">Litt fakta om cideren</h2>
         <p className="text-gray-600">
           Denne flasken inneholder hjemmelaget eplecider laget av epler fra Trovåg, landstedet til Turid og Gunnar. <br /> <br />
